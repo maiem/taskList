@@ -1,0 +1,42 @@
+@use "sass:math" as math;
+@import "media";
+
+$col: 12;
+$gutter: 20px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include xs {
+    @for $i from 1 through $col {
+      .col-xs-#{$i} {
+        width: math.div(100%, 12) * $i;
+      }
+    }
+  }
+
+  @include sm {
+    @for $i from 1 through $col {
+      .col-sm-#{$i} {
+        width: math.div(100%, 12) * $i;
+      }
+    }
+  }
+
+  @include md {
+    @for $i from 1 through $col {
+      .col-md-#{$i} {
+        width: math.div(100%, 12) * $i;
+      }
+    }
+  }
+
+  @include lg {
+    @for $i from 1 through $col {
+      .col-lg-#{$i} {
+        width: math.div(100%, 12) * $i;
+      }
+    }
+  }
+}

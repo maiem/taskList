@@ -1,0 +1,27 @@
+// extra small- phone
+@mixin xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+// small - phone
+@mixin sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+//medium - tablet
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// large - LAPTOP 1024 //
+@mixin lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
